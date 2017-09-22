@@ -1,5 +1,3 @@
-// var buttonPostId = $('.btn').data('id')
-
 getAllBlogposts().then(appendBlogposts)
 
 function appendBlogposts(posts) {
@@ -18,12 +16,3 @@ Handlebars.registerHelper('sock', function(body) {
   let sliced = split.slice(0, 4)
   return sliced.join('.') + "."
 });
-
-
-// $('.content').on('click','button',function(){
-//
-//   var buttonId = $(this).data('id')
-//   location="/post.html?id="
-//   console.log(buttonId);
-//
-// })

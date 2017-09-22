@@ -19,14 +19,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js">
 </script>
 <!-- Handlebar Scripts -->
-<script id="edit-post-template" type="text/x-handlebars-template">
+<script id="edit-comment-template" type="text/x-handlebars-template">
   <div class="entry">
 
-    <label for="title">Title</label>
-    <input class="" id="title" type="text" name="" value="{{title}}" placeholder=""></input>
-
     <label for="author">Author</label>
-    <input id="author" type="text" name="" value="{{author}}" placeholder=""></input>
+    <input id="author" type="text" name="" value="{{author_name}}" placeholder=""></input>
 
 <label for="body">Body</label>
     <textarea id="body" type="text" name="">{{body}}</textarea>
@@ -34,9 +31,10 @@
 
     <button id="button" data-id="{{id}}" class="waves-effect waves-light btn" href="/show-edit-post.html?id={{id}}"> Submit Edit </button>
 
+    <input id="blog-link"type="hidden" data-bloglink="/show-post.html?id={{blog_id}}">
 
   </div>
 </script>
-<script src="show-edit-post.js" charset="utf-8"></script>
+<script src="edit-comment.js" charset="utf-8"></script>
 
 </html>

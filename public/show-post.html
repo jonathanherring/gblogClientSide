@@ -10,7 +10,9 @@
     <section class="blogpost">
 
     </section>
+<section class="comment">
 
+</section>
   </body>
 
   <script
@@ -26,13 +28,34 @@
   <div class="entry">
 
     <h3>{{title}}</h3>
+    <p>{{author}}</p>
+    <p>{{creation_time}}</p>
     <div class="body">
       {{body}}
 
     </div>
-    <a id ="button" data-id="{{id}}" class="waves-effect waves-light btn" href=""> Read More </a>
+    <a id ="button" data-id="{{id}}" class="waves-effect waves-light btn" href="/show-edit-post.html?id={{id}}"> Edit Post </a>
+
+    <a id ="d-button" data-id="{{id}}" class="waves-effect waves-light btn" href="index.html"> Delete Post </a>
+
+
 
   </div>
 </script>
-<script src="show.js" charset="utf-8"></script>
+
+<script id="show-comments-template" type="text/x-handlebars-template">
+<div class="entry">
+{{#each comment}}
+  <h5>{{author_name}}</h5>
+  <p>{{body}}</p>
+  <p>{{creation_time}}</p>
+
+  <a id ="button" data-id="{{id}}" class="waves-effect waves-light btn" href="/edit-comment.html?id={{id}}"> Edit Comment </a>
+
+  <a id ="button" data-id="{{id}}" class="waves-effect waves-light btn" > Edit Comment </a>
+
+{{/each}}
+</div>
+</script>
+<script src="show-post.js" charset="utf-8"></script>
 </html>
